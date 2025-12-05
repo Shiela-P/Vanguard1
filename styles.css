@@ -477,10 +477,6 @@ header small{
     color: var(--white);
     font-weight: lighter;
     font-size: .75rem;
-    text-align: center;
-    margin: 0 auto;
-    justify-content: center;
-    align-items: center;
 }
 
 
