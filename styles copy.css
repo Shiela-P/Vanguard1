@@ -1,0 +1,538 @@
+/* CSS BY Shiela Peters */
+
+/* IMPORTED FONTS*/
+/* IMPORT "INTER" FROM GOOGLE FONTS" */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+/* CSS RESET */
+/* http://meyerweb.com/eric/tools/css/reset/
+v2.0 | 20110126
+License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* ROOT VARIABLES */
+:root {
+    --blue: #007BFF;
+    --red: #FF4500;
+    --white: #EAEAEA;
+    --black: #000000;
+    --charcoal: #333333;
+    --font: "Inter", sans-serif;
+}
+
+/* GLOBAL STYLES (MOBILE FIRST (SMALL) */
+/* Mobile menu styles */
+nav{
+    background-color: var(--black);
+    position: relative;
+    text-align: right;
+    max-width: 100%;
+}
+
+li{
+    max-width: 100%;
+}
+
+nav ul{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+    text-align: center;
+    max-height: 0;
+    max-width: 100%;
+}
+
+nav h2{
+    visibility: hidden;
+    height: 1px;
+}
+
+nav li a{
+    display: block;
+    font-family: sans-serif;
+    font-size: 1.5rem;
+    padding: 1rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--blue);
+    transition: background-color .3s ease-in;
+}
+
+nav a:hover, nav input:hover{
+    background-color: var(--blue);
+    color: var(--black);
+}
+
+nav label{
+    cursor: pointer;
+    display: inline-block;
+    padding: 1.5rem;
+    user-select: none;
+}
+
+label span{
+    background-color: white;
+    display: block;
+    height: .25rem;
+    position: relative;
+    transition: background-color .3s ease-out;
+    width: 2rem;
+}
+
+label span:before, label span:after{
+    background:white;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+
+label span:before{
+    top: .75rem;
+}
+
+label span:after{
+    top: -.75rem;
+}
+
+header input{
+    display:none;
+}
+
+input:checked ~ ul{
+    max-height: 500px;
+}
+
+input:checked ~ label span {
+    background: transparent;
+}
+
+input:checked ~ label span:before{
+    transform: rotate(-45deg);
+}
+
+input:checked ~ label span:after{
+    transform: rotate(45deg);
+}
+
+input:checked ~ label:not(.steps) span:before, input:checked ~ label:not(.steps) span:after {
+    top: 0;
+}
+
+/* ------------------------------------ */
+body{
+    font-family: 'inter', Arial, Helvetica, sans-serif;
+}
+h1{
+    color: var(--blue);
+    font-weight: bold;
+    font-size: 2rem;
+    margin: 1rem;
+    white-space: nowrap;
+}
+
+
+header{
+    background-color: var(--black);
+    padding: 1rem;
+    box-shadow: 0 5px 7px var(--blue);
+    position: relative;
+}
+
+header div{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+}
+
+
+ .innovation h2{
+    color: var(--white);
+    font-weight: bold;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.innovation p{
+    color: var(--white);
+}
+
+.innovation div{
+    padding: 1rem .5rem;
+    backdrop-filter: blur(10px);
+}
+
+.button{
+    background-color: var(--blue);
+    border: none;
+    color: white;
+    padding: 1rem;
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 0 auto;
+    /* width: 15rem; */
+    border-radius: .5rem;
+    transition: transform 0.5s ease;
+    text-align: center;
+}
+
+.button:hover{
+    background-color: var(--red);
+    transform: scale(1.05);
+}
+
+h2{
+    font-weight: bold;
+    font-size: 2rem;
+    padding: 1rem;
+}
+
+p{
+    line-height: 1.5rem;
+}
+
+#expertise{
+    margin: 1rem;
+}
+
+.offerings{
+    display: grid;
+    gap: 1rem;
+    margin-bottom: 3rem;
+}
+
+.offerings div{
+    background-color: var(--blue);
+    color: white;
+    padding: 1rem;
+    top: 0;
+    border-radius: 0.5rem;
+    transition: top 1s;
+}
+
+.offerings h3{
+    font-weight: bold;
+    font-size: 1.25rem;
+    margin: 1rem;
+}
+
+#results{
+    background-color: var(--blue);
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 0;
+    color: var(--white)
+}
+
+h3{
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin: 1rem;
+}
+
+#contact{
+    background-color: var(--black);
+    color: white;
+
+}
+/* MIN-WIDTH OF THE PAGE SHOULD NOT GO BELOW 400PX */
+body{
+    min-width: 400px;
+}
+
+section{
+    width: 100%;
+}
+
+section.contact{
+    background-color: var(--black);
+}
+/* ADD A DIV WITH THE CLASS OF CONTAINER TO EVERY CONTENT CONTAINER THIS IS ALLOW THE BASE ELEMENTS TO BE 100% WIDTH, BUT CONSTRAIN THE ACTUAL CONTENT TO 90% */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+table{
+    margin: 1rem auto;
+}
+
+th, td{
+    border: solid var(--charcoal) 1px;
+    padding: 1rem;
+    text-align: center;
+}
+
+th{
+    font-weight: bold;
+}
+
+tr{
+    background-color: var(--black);
+}
+
+tr:nth-child(3), tr:nth-child(5){
+    background-color: var(--charcoal);
+}
+
+input, textarea{
+    width: 100%;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    border: solid var(--blue) 3px;
+}
+
+form{
+    margin-top: 1rem;
+}
+
+input[type="submit"]{
+    border:none;
+    color: var(--white);
+    background-color: var(--blue);
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: .5rem;
+    padding: 1rem;
+}
+
+footer{
+    text-align: center;
+    background-color: var(--black);
+    color: white;
+}
+
+a{
+    color: var(--blue);
+}
+
+.results-grid{
+    display: grid;
+}
+
+@keyframes fadeInDown{
+    from{
+        top: -1rem;
+        opacity: 0%;
+    }
+    to{
+        top: 0;
+        opacity: 100%;
+    }
+}
+
+/* @keyframes hoverUp{
+    from{
+        top: 0rem;
+    }
+    to{
+        top: -0.5rem;
+    }
+} */
+
+.offerings div:hover{
+    /* animation-name: hoverUp;
+    animation-duration: 1s; */
+    position: relative;
+    top: -0.5rem;
+}
+
+.button, h2, h3{
+    animation-name: fadeInDown;
+    animation-duration: 2s;
+    position: relative;
+    display: inline-block;
+}
+
+
+
+
+/* ADD TO "INNOVATION & INVESTMENT SECTION (Photo by Kevin Matos on Unsplash) */
+ .innovation{
+    background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('images/vanguard-hero.jpg') no-repeat center center/cover;
+    height: 80vh;
+    display: grid;
+    place-items: center;
+    text-align: center;
+    padding: 1rem;
+    overflow: hidden;
+}
+
+/* ADD FLOATING SVG LOGO BEFORE THE H1 */
+ h1::before{
+    content: "";
+    display: inline-block;
+    left:-.5rem;
+    width: 3.75rem;
+    height: 3.75rem;
+    background: url('images/vanguard-logo.svg') no-repeat center/contain;
+    visibility: visible;
+
+}
+/* THIS ONE IS DONE FOR YOU */
+#bar-chart {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    align-items: flex-end;
+    justify-content: space-around;
+    gap: 1rem;
+    height: 300px;
+    width: 100%;
+    max-width: 800px;
+    padding: 1rem;
+    position: relative;
+}
+/* ADD ON TRANSITION ON HEIGHT */
+.bar {
+    width: 50px;
+    background: var(--charcoal);
+    border-radius: 10px;
+    position: relative;
+    transition: height 1s;
+    height: 0;
+}
+/* THIS ONE IS DONE FOR YOU */
+.bar::after {
+    content: attr(data-year);
+    position: absolute;
+    bottom: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--white);
+}
+@keyframes stepUp {
+    0% {
+        height: 0;
+    }
+    100% {
+        height: var(--height);
+    }
+}
+
+footer{
+    padding: 2rem;
+}
+
+small{
+    line-height: 1.5rem;
+}
+/* ADD ANIMATION ON stepUp for 1s ease-in-out forwards */
+.bar {
+    animation: stepUp 1s ease-in-out forwards;
+}
+
+
+/* MEDIA QUERIES (MEDIUM) */ 
+@media (min-width: 800px){
+ #results {
+        grid-template-columns: 1fr 1fr;
+    }
+    .results-container {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .results-table {
+        width: 50%;
+    }
+    .bar-chart {
+        width: 50%;
+    }
+
+   .offerings{
+        grid-template-columns: 1fr 1fr;
+   }
+
+   .results-grid{
+        grid-template-columns: 1fr 1fr;
+   }
+
+   nav ul {
+        overflow:visible;
+        position: absolute;
+        top: 1.5rem;
+        left: .5rem;
+        display: grid;
+        grid-template-columns: 3fr 1fr 1fr 10fr;
+        max-width: 100%;
+    }
+
+    nav li a{
+        display: inline-block;
+        font-size: 1.2rem;
+    }
+    
+    label span, header input{
+        display: none;
+    }
+
+}
+   
+
+/* MEDIA QUERIES (LARGE) */
+@media (min-width: 1024px){
+   .offerings{
+    grid-template-columns: 1fr 1fr 1fr;
+   }
+
+   form{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+   }
+
+   input[type="submit"]{
+    max-height: 3rem;
+   }
+}
