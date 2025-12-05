@@ -479,6 +479,8 @@ header small{
     font-size: .75rem;
     text-align: center;
     margin: 0 auto;
+    justify-content: center;
+    align-items: center;
 }
 
 
