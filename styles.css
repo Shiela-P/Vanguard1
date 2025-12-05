@@ -473,6 +473,14 @@ small{
     animation: stepUp 1s ease-in-out forwards;
 }
 
+header small{
+    color: var(--white);
+    font-weight: lighter;
+    font-size: .75rem;
+    text-align: center;
+    margin: 0 auto;
+}
+
 
 /* MEDIA QUERIES (MEDIUM) */ 
 @media (min-width: 800px){
